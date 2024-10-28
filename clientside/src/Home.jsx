@@ -12,7 +12,6 @@ function Home() {
       <Navbar />
       <div className="container my-5 text-center">
         <h1>Josephite Math Club</h1>
-        <p>Explore our blogs, events, and resources to enhance your math skills.</p>
         
         {/* Add the AboutCard component here */}
         <AboutCard />

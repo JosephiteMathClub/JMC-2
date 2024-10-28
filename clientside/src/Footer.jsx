@@ -59,7 +59,7 @@ function Footer() {
               <input
                 type="email"
                 className="form-control custom-bg-black text-white border-secondary mb-2"
-                placeholder="Enter Email Address"
+                placeholder="Email Address"
                 required
               />
               <button type="submit" className="btn btn-primary w-100">Subscribe</button>

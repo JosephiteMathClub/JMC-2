@@ -6,7 +6,31 @@
 body{
   background-color: black !important;
 }
+/* Add a hover effect to navbar links */
+.navbar-nav .nav-link {
+  color: var(--secondary); /* Set initial color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
 
+.navbar-nav .nav-link:hover {
+  color: var(--primary) !important; /* Hover color */
+}
+
+footer a {
+  color: var(--secondary); /* Set initial color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+
+footer a:hover {
+  color: var(--primary) !important; /* Hover color */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--secondary) !important;
+  opacity: 1; /* Firefox */
+}
 /* Custom Background and Text Colors */
 .custom-bg-black {
   background-color: var(--black) !important;
