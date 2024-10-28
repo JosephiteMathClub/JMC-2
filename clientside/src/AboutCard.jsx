@@ -1,10 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './App.css'
 function AboutCard() {
   return (
-    <div className="glass-card mx-auto mt-4 p-4" style={{ maxWidth: '400px' }}>
-      <h2>About Josephite Math Club</h2>
+    <div className="glass-card mx-auto mt-4 p-4" id="about" style={{ maxWidth: '400px' }}>
+      <h2>About</h2>
       <p>
         The Josephite Math Club is dedicated to cultivating a passion for mathematics.
         Our mission is to provide a supportive environment for students to explore mathematical

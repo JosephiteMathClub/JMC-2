@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg custom-bg-black"> {/* Custom class for background */}
       <div className="container-fluid">
-        <Link className="navbar-brand text-primary" to="/home">Math Club</Link>
+        <Link className="navbar-brand text-primary" to="/home">JMC</Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,7 +26,7 @@ function Navbar() {
               <Link className="nav-link text-secondary" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-secondary" to="/about">About</Link>
+              <Link className="nav-link text-secondary" to="/home#about">About</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-secondary" to="/events">Events</Link>

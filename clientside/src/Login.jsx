@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import './custom.css'
+import Footer from './Footer';
+import Navbar from './Navbar';
 function Login() {
   const [formData, setFormData] = useState({
     email: '',
@@ -28,6 +30,8 @@ function Login() {
   };
 
   return (
+    <div>
+      <Navbar />
     <div className="container mt-5">
       <div className="card bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '400px', margin: 'auto' }}>
         <h2 className="text-center text-primary mb-4">Login</h2>
@@ -74,6 +78,9 @@ function Login() {
           </p>
         </div>
       </div>
+    </div>
+    <br></br>
+    < Footer/>
     </div>
   );
 }

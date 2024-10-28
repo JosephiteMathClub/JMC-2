@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
-
+import './custom.css'
 function Footer() {
   return (
     <footer className="custom-bg-black text-white py-5"> {/* Custom background */}

@@ -3,10 +3,13 @@
   --secondary: #cce6ff;
   --black: #070716;
 }
+body{
+  background-color: black !important;
+}
 
 /* Custom Background and Text Colors */
 .custom-bg-black {
-  background-color: var(--black) !important; /* Sets background to custom black */
+  background-color: var(--black) !important;
 }
 
 /* Custom Text Colors */
@@ -25,4 +28,11 @@
 /* Additional Bootstrap Overrides if needed */
 .navbar-dark .navbar-brand {
   color: var(--primary) !important;
+}
+.navbar-dark .navbar-toggler-icon {
+  background-color: var(--secondary); /* or any other custom color variable */
+}
+.nav-link.active {
+  color: var(--primary);
+  font-weight: bold; /* Optional */
 }

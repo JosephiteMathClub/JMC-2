@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import axios from 'axios'
+import Footer from './Footer';
+import Navbar from './Navbar';
 import { useNavigate } from 'react-router-dom'
+import './custom.css'
+
 function Signup() {
   const [formData, setFormData] = useState({
     name: '',
@@ -30,6 +34,8 @@ function Signup() {
   };
 
   return (
+    <div>
+    <Navbar />
     <div className="container mt-5">
       <div className="card bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '500px', margin: 'auto' }}>
         <h2 className="text-center text-primary mb-4">Registration</h2>
@@ -170,6 +176,8 @@ function Signup() {
           </p>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 }

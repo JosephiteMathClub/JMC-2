@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './Login'
 import Signup from './Signup';
 import Home from './Home';
-
+import NotFound  from './NotFound';
+import './App.css'
+import './custom.css'
 function App() {
   return (
 <BrowserRouter>
@@ -13,6 +15,8 @@ function App() {
   <Route path='/login' element={<Login />}></Route>
   <Route path='/home' element={<Home />}></Route>
   <Route path='/' element={<Home />}></Route>
+  <Route path="*" element={<NotFound />} />
+
 
 </Routes>
 </BrowserRouter>
