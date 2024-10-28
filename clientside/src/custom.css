@@ -1,0 +1,28 @@
+:root {
+  --primary: #00aaff;
+  --secondary: #cce6ff;
+  --black: #070716;
+}
+
+/* Custom Background and Text Colors */
+.custom-bg-black {
+  background-color: var(--black) !important; /* Sets background to custom black */
+}
+
+/* Custom Text Colors */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.bg-dark {
+  background-color: var(--black) !important;
+}
+
+/* Additional Bootstrap Overrides if needed */
+.navbar-dark .navbar-brand {
+  color: var(--primary) !important;
+}

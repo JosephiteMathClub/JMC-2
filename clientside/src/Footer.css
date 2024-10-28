@@ -1,0 +1,45 @@
+footer {
+    background-color: #0a0a0a;
+  }
+  
+  .logo {
+    font-weight: 700;
+  }
+  
+  .footer-cat {
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .footer-cat-links a {
+    text-decoration: none;
+    color: #adb5bd;
+  }
+  
+  .footer-cat-links a:hover {
+    color: #0d6efd;
+  }
+  
+  .footer-cat-links li {
+    margin: 5px 0;
+  }
+  
+  .social-links a {
+    font-size: 1.25rem;
+    color: #adb5bd;
+    transition: color 0.2s;
+  }
+  
+  .social-links a:hover {
+    color: #0d6efd;
+  }
+  
+  #address div {
+    font-size: 0.875rem;
+  }
+  
+  #subscribe input[type="email"] {
+    margin-bottom: 0.5rem;
+  }
+  

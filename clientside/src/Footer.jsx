@@ -1,98 +1,79 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Footer.css'; // Assume the provided CSS is saved in this file
+import './Footer.css';
 
 function Footer() {
-  const footerToggle = (e) => {
-    e.currentTarget.parentNode.querySelector('.footer-cat-links').classList.toggle('active');
-    e.currentTarget.querySelector('.footer-toggle').classList.toggle('btnActive');
-  };
-
   return (
-    <footer>
-      <div>
-        <span className="logo">Josephite Math Club</span>
-      </div>
-
-      <div className="row">
-        {/* About Section */}
-        <div className="col-3">
-          <div className="link-cat" onClick={footerToggle}>
-            <span className="footer-toggle"></span>
-            <span className="footer-cat">About</span>
+    <footer className="custom-bg-black text-white py-5"> {/* Custom background */}
+      <div className="container">
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <span className="logo text-primary fs-4">Josephite Math Club</span>
+          <div className="d-flex social-links">
+            <a href="https://www.facebook.com/2015JMC/photos" className="me-3 text-secondary">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/jmc_._official/" className="text-secondary">
+              <i className="fab fa-instagram"></i>
+            </a>
           </div>
-          <ul className="footer-cat-links">
-            <li><a href="executive.html"><span>Executive Members</span></a></li>
-            <li><a href="motto.html"><span>Club motto</span></a></li>
-            <li><a href="#"><span>Club History</span></a></li>
-          </ul>
         </div>
 
-        {/* Resources Section */}
-        <div className="col-3">
-          <div className="link-cat" onClick={footerToggle}>
-            <span className="footer-toggle"></span>
-            <span className="footer-cat">Resources</span>
-          </div>
-          <ul className="footer-cat-links">
-            <li><a href="#gallery"><span>Gallery</span></a></li>
-            <li><a href="#"><span>Magazine Draft</span></a></li>
-            <li><a href="#"><span>Math problems</span></a></li>
-            <li><a href="#"><span>Mock tests</span></a></li>
-            <li><a href="#"><span>Club activities</span></a></li>
-          </ul>
-        </div>
-
-        {/* Quick Links Section */}
-        <div className="col-3">
-          <div className="link-cat" onClick={footerToggle}>
-            <span className="footer-toggle"></span>
-            <span className="footer-cat">Quick Links</span>
-          </div>
-          <ul className="footer-cat-links">
-            <li><a href="#home"><span>Home</span></a></li>
-            <li><a href="#events"><span>Events</span></a></li>
-            <li><a href="#index.html#articles"><span>Articles</span></a></li>
-            <li><a href="#contact"><span>Contact</span></a></li>
-          </ul>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="col-3" id="newsletter">
-          <span>Stay Connected</span>
-          <form id="subscribe">
-            <input type="email" id="subscriber-email" placeholder="Enter Email Address" />
-            <input type="submit" value="Subscribe" id="btn-scribe" />
-          </form>
-
-          <div className="social-links social-2">
-            <a href="https://www.facebook.com/2015JMC/photos"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/jmc_._official/"><i className="fab fa-instagram"></i></a>
-          </div>
-
-          <div id="address">
-            <span>Club Location</span>
-            <ul>
-              <li>
-                <i className="far fa-building"></i>
-                <div>97 Asad Avenue<br /> Mohammadpur, Dhaka-1207</div>
-              </li>
+        <div className="row">
+          {/* About Section */}
+          <div className="col-6 col-md-3 mb-3">
+            <h5 className="footer-cat">About</h5>
+            <ul className="footer-cat-links list-unstyled">
+              <li><a href="executive.html" className="text-secondary">Executive Members</a></li>
+              <li><a href="motto.html" className="text-secondary">Club Motto</a></li>
+              <li><a href="#" className="text-secondary">Club History</a></li>
             </ul>
           </div>
+
+          {/* Resources Section */}
+          <div className="col-6 col-md-3 mb-3">
+            <h5 className="footer-cat">Resources</h5>
+            <ul className="footer-cat-links list-unstyled">
+              <li><a href="#gallery" className="text-secondary">Gallery</a></li>
+              <li><a href="#" className="text-secondary">Magazine Draft</a></li>
+              <li><a href="#" className="text-secondary">Math Problems</a></li>
+              <li><a href="#" className="text-secondary">Mock Tests</a></li>
+              <li><a href="#" className="text-secondary">Club Activities</a></li>
+            </ul>
+          </div>
+
+          {/* Quick Links Section */}
+          <div className="col-6 col-md-3 mb-3">
+            <h5 className="footer-cat">Quick Links</h5>
+            <ul className="footer-cat-links list-unstyled">
+              <li><a href="#home" className="text-secondary">Home</a></li>
+              <li><a href="#events" className="text-secondary">Events</a></li>
+              <li><a href="#articles" className="text-secondary">Articles</a></li>
+              <li><a href="#contact" className="text-secondary">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Newsletter Section */}
+          <div className="col-12 col-md-3 mb-3">
+            <h5 className="footer-cat">Stay Connected</h5>
+            <form id="subscribe" className="mb-2">
+              <input
+                type="email"
+                className="form-control custom-bg-black text-white border-secondary mb-2"
+                placeholder="Enter Email Address"
+                required
+              />
+              <button type="submit" className="btn btn-primary w-100">Subscribe</button>
+            </form>
+            <div id="address" className="text-secondary">
+              <p className="mb-1">Club Location</p>
+              <div>97 Asad Avenue<br />Mohammadpur, Dhaka-1207</div>
+            </div>
+          </div>
         </div>
 
-        {/* Social Links */}
-        <div className="social-links social-1 col-6">
-          <a href="https://www.instagram.com/jmc_._official/"><i className="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/jmc_._official/"><i className="fab fa-instagram"></i></a>
+        <div className="text-center mt-4">
+          <small className="text-secondary">&copy; 2024 All Rights Reserved | Designed by JMC</small>
         </div>
-      </div>
-
-      <div id="copyright">
-        &copy; All Rights Reserved 2024
-      </div>
-      <div id="owner">
-        <span>Designed by JMC</span>
       </div>
     </footer>
   );

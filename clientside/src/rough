@@ -1,0 +1,746 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josephite Math Club</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+    <!-- loading screen -->
+      <div class="loading-screen">
+        <div class="integration-sign">∫</div>
+        <div class="calculating-text"></div>
+    </div>
+</div>
+
+
+
+    <!-- Home Section -->
+<header>
+    <section id="home" class="section">
+        <!--Hero sec-->
+        <video autoplay muted loop id="myVideo">
+            <source src="./gallery/GCb3EBk5PGUxsG4BAEd0GXahwW8rbmdjAAAF.mp4" type="video/mp4">
+          </video>
+        <!--Btn-->
+        <div class="contentt">
+            <a href="#about">
+            <button id="myBtn">Learn More</button>
+        </a>
+        </div>
+
+          <audio autoplay loop id="audio">
+            <source src="./gallery/bgm.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+
+    </section>
+</header>
+
+
+    <!-- About Section -->
+    <section id="about" class="section glass-section">
+        
+        <!-- Add content for the about section -->
+        <div class="about-card">
+                <h2>About Us</h2>
+
+<p class="about-content">
+    The Josephite Math Club, established in 2015 by students of St. Joseph Higher Secondary School, stands as a testament to the power of passion and collaboration in the pursuit of mathematical excellence. What began as a modest initiative among Josephites has flourished into a vibrant community, thanks to the unwavering support of dedicated teachers and the boundless enthusiasm of aspiring mathematicians.
+    
+    At the heart of our club lies the motto, "Let infinity be your limit." This guiding principle encapsulates our belief in the limitless potential of each member to explore, innovate, and push the boundaries of mathematical knowledge. With a spirit of curiosity and a thirst for discovery, we embark on a journey where there are no bounds to what we can achieve.
+    Over the years, the Josephite Math Club has evolved into a dynamic hub of intellectual exchange and camaraderie. Through engaging workshops, stimulating discussions, and exciting competitions, we foster an environment where mathematical ideas thrive and creativity knows no bounds. Our members are not just learners but also teachers, sharing their insights and inspiring one another to reach new heights.
+
+    As we continue to grow and evolve, we remain committed to our founding vision of nurturing a community where passion for mathematics reigns supreme. With every problem solved, every theorem proved, and every idea shared, we reaffirm our dedication to making the Josephite Math Club a beacon of excellence in mathematical exploration. Join us, and together, let us embrace the infinite possibilities that lie ahead.
+        
+</p>
+
+        <a href="" class="read-more-btn">Read More</a>
+    </div>
+
+    </section>
+<br>
+ <!--articles-->
+
+    <!-- Gallery Section -->      
+      <h2 class="section-title" style="height: 30vh;">Gallery</h2>
+
+    <section id="gallery" style="padding-bottom: 64vh" class="section glass-section">
+        <!-- Add content for the gallery section -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="gallery/one.webp" style="width:100%">
+              <div class="text">Event Management</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="gallery/two.jpg" style="width:100%">
+              <div class="text">Award giving ceremony</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="gallery/three.jpg" style="width:100%">
+              <div class="text">Speech</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="gallery/four.jpg" style="width:100%">
+                <div class="text">Tribute to national anthem</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="gallery/five.jpg" style="width:100%">
+                <div class="text">Reporting</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="gallery/six.jpg" style="width:100%">
+                <div class="text">Mathematicians' Potraits</div>
+              </div>
+    
+            <!-- Next and previous buttons -->
+ 
+          </div>
+       <!--   <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+
+        </div>
+    -->
+    </section>
+    <br>
+    <br>
+    <br>
+   
+    <!-- Contact Section -->
+    <section id="contact" class="section glass-section">
+        <h2 class="section-title">Contact</h2>
+        <!--cn box-->
+<div class="contact-container">
+
+        <div class="contact-box">
+    <a href="tel:01617367584">
+        <div class="icon">
+            <i class="fas fa-phone"></i>
+        </div>
+        <span>01617367584</span>
+    </a>
+</div>
+
+
+<div class="contact-box">
+    <a href="mailto:tawhidbinomar@gmail.com">
+        <div class="icon">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <span>tawhidbinomar@gmail.com</span>
+    </a>
+</div>
+</div>
+
+        <!-- Add content for the contact section -->
+ <div class="login-box">
+        <h2>Message Us</h2>
+        <div class="input-box">
+            <input type="text" id="name" required>
+            <label>Name</label>
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" required>
+            <label>Email</label>
+        </div>
+   <div class="input-box">
+            <input type="number" id="phone" required>
+            <label>Phone Number</label>
+        </div>
+   <div class="input-box">
+            <input type="textarea" id="message"required>
+            <label>Your Message</label>
+        </div>
+<button class="submit-btn"  onclick="startSpinner()">Send</button>
+<div id="spinner" class="spinner"></div>
+
+    </div>
+    </section>
+<!--pop up structure-->
+<div class="overlay-pop" id="overlay"></div>
+
+<div class="popup" id="popup">
+  <i class="fas fa-check-circle"></i>
+  <p>Message has been sent</p>
+  <button id="okBtn">Okay</button>
+</div>
+<!--pop up end-->
+    <!-- Footer -->
+
+<style>
+    header {
+
+    text-align: center;
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+}
+
+header .overlay{
+    width: 100%;
+    height: 200vh;
+    padding: 50px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #1c052b69 10%, #3e107b6b 100%);
+    
+}
+/* About Section */
+#about {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-card {
+    max-width: 600px; /* Set maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 40px;
+    border-radius: 20px; /* Add rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    backdrop-filter: blur(23px) saturate(209%);
+    -webkit-backdrop-filter: blur(23px) saturate(209%);
+    background-color: rgba(25, 25, 28, 0.78); /* Updated to match rgba format */
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.8s ease; /* Add transition for smooth height change */
+}
+
+
+.about-card.open {
+    height: auto; /* Auto height when expanded */
+}
+
+.about-card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-card p.about-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    height: 80px; /* Initial height */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.about-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #02AAB0;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #00CDAC;
+}
+
+.containerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    text-align: center;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px; /* Adjust as needed */
+}
+
+.left {
+    text-align: right;
+    padding-right: 5px; /* Adjust as needed */
+}
+
+.right {
+    text-align: left;
+    padding-left: 5px; /* Adjust as needed */
+}
+
+.responsive-image {
+    max-width: 100px; /* Adjust as needed */
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+    .responsive-image {
+        max-width: 70px; /* Adjust as needed */
+        min-width: 70px;
+    }
+}
+@media screen and (max-width: 768px) {
+        .glass-card {
+            width: calc(50% - 20px); /* Adjust the width of each card for smaller screens */
+            max-width: calc(50% - 20px); /* Adjust the maximum width */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .glass-card {
+            width: calc(100% - 20px); /* Adjust the width of each card for even smaller screens */
+            max-width: calc(100% - 20px); /* Adjust the maximum width */
+        }
+    }
+.event-container{
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.glass-card {
+        width: calc(33.333% - 20px); /* Adjust the width of each card, considering the gap */
+        max-width: 300px; /* Adjust the maximum width */
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        backdrop-filter: blur(23px) saturate(209%);
+        -webkit-backdrop-filter: blur(23px) saturate(209%);
+        background-color: rgba(25, 25, 28, 0.78);
+        border-radius: 12px;
+        border: 1px solid rgba(37, 170, 225, 1);
+    }
+    .glass-card .content {
+        padding: 20px;
+        text-align: center;
+} 
+
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+  overflow-x: hidden;
+}
+.img-card{
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 12px;
+}
+/* Body styles */
+body {
+    font-family: 'Abel', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track
+{
+  border: 1px solid black;
+  background-color: black;
+}
+
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-image: linear-gradient(to right, #25aae1, cyan);
+      border-radius: 20px;
+}
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.full-screen {
+    position: fixed;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* Add blurry effect */
+}
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 9999; /* Set a high z-index value to ensure it stays on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    color: #fff;
+    font-size: 24px;
+}
+
+.loading-screen {
+    display: flex;
+    align-items: center;
+}
+
+.integration-sign {
+    font-size: 4rem;
+    margin-right: 10px;
+}
+
+.calculating-text {
+    font-size: 2rem;
+    white-space: nowrap; /* Prevent line break */
+    overflow: hidden; /* Hide overflow */
+    border-right: 2px solid black; /* Typewriter cursor effect */
+    animation: typing 1s steps(12, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+/* Add other styles for navbar and sections */
+
+
+/*-*/
+
+/*exp gallery*/
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+/**contact box**/
+.contact-box {
+ width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(37, 170, 225, 1);
+    transition: all 0.5s ease;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+.contact-box:hover {
+    transform: scale(1.1);
+    
+}
+
+#contact .icon {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#contact span {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+#contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/**/
+.item {
+  width: 176px;
+  height: 22vh;
+  max-height: 213px;
+  list-style-type: none;
+  position: absolute;
+top: 59vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; /* Add this line */
+  border-radius: 25px;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+/* Other CSS rules remain unchanged */
+
+/* Other CSS rules remain unchanged */
+
+.item:nth-child(1),
+.item:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40vh;
+  transform: scale(2);
+  border-radius: 25px;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.item:nth-child(3) {
+  left: 50%;
+}
+
+.item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+
+.item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+.item:nth-child(6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+ul .content {
+  width: min(30vw, 400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica, sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+}
+
+.content .title {
+font-family: 'Abel', sans-serif;
+        text-transform: uppercase;
+}
+
+.content .description {
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+}
+
+.content button {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+margin: 0 auto;
+}
+
+.item:nth-of-type(2) .content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.nav {
+    position: absolute;
+    left: 36vw;
+    transform: translateX(-50%);
+    transform: translateY(548%);
+    z-index: 5;
+    user-select: none;
+}
+
+@media (min-width: 610px) {
+    .nav {
+      left: 46vw; /* Adjust left position to center */
+    }
+  }
+  @media (min-width: 955px) {
+    .nav {
+      left: 47vw; /* Adjust left position to center */
+    }
+  } 
+
+.nav .btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 650px) {
+  .content .title {
+    font-size: 0.9rem;
+  }
+
+  .content .description {
+    font-size: 0.65rem;
+  }
+
+  .content button {
+    font-size: 0.7rem;
+  }
+
+  .item {
+    width: 130px;
+    height: 220px;
+  }
+
+  .item:nth-child(4) {
+    left: calc(50% + 140px);
+  }
+
+  .item:nth-child(5) {
+    left: calc(50% + 280px);
+  }
+
+  .item:nth-child(6) {
+    left: calc(50% + 420px);
+    opacity: 0;
+  }
+}
+    </style>
+<script>
+ document.getElementById("audio").autoplay;
+ let slideIndex = 0;
+ let articleIndex = 0;
+
+ showSlides();
+showArticles()
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+function showArticles() {
+  let i;
+  let arts = document.getElementsByClassName("article");
+  for (i = 0; i < arts.length; i++) {
+    arts[i].style.display = "none";
+  }
+  articleIndex++;
+  if (articleIndex > arts.length) {articleIndex = 1}
+  arts[articleIndex-1].style.display = "block";
+  setTimeout(showArticles, 5000); // Change image every 2 seconds
+}
+
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="anime.min.js"></script>
+
+    <script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
