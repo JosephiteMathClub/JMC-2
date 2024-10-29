@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./clientside && npm run install && npm run dev && cd .. && cd ./serverside && npm run install && npm run start"
+    "start": "cd ./clientside && npm install && npm run dev && cd .. && cd ./serverside && npm install && npm run start"
   },
   "keywords": [],
   "author": "",
