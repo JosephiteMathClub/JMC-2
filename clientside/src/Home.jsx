@@ -2,6 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import GalleryCarousel from './GalleryCarousel'
+import ContactForm from './ContactForm';
+import EventCard from './EventCard';
 import AboutCard from './AboutCard'; // Import the AboutCard component
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './App.css'
@@ -9,18 +12,26 @@ import './custom.css'
 function Home() {
   return (
     <div>
-      <Navbar />
+      <Navbar /> 
+      <video autoPlay muted loop id="myVideo">
+            <source src="../public/vid.mp4" type="video/mp4"/>
+          </video> 
+          <br></br>
+
       <div className="container my-5 text-center">
-        <h1>Josephite Math Club</h1>
-        
+     
         {/* Add the AboutCard component here */}
+        <section id="about">
         <AboutCard />
-        
-        <div className="mt-4">
-          <Link to="/events" className="btn btn-primary">Upcoming Events</Link>
-        </div>
-      </div>
+        </section>
+        <GalleryCarousel />
+ <EventCard />
+
+      </div> 
+    <ContactForm />
+
       <Footer />
+
     </div>
   );
 }
