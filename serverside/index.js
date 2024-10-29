@@ -5,11 +5,16 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('./models/User'); // Ensure your User model is correctly set up
+const path = require('path');
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+/**static build react */
+
+
+/** */
 const uri = process.env.MONGODB_URI; // MongoDB URI from .env
 const jwtSecret = process.env.JWT_SECRET; // JWT Secret from .env
 

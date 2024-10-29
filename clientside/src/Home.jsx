@@ -14,7 +14,7 @@ function Home() {
     <div>
       <Navbar /> 
       <video autoPlay muted loop id="myVideo">
-            <source src="../public/vid.mp4" type="video/mp4"/>
+            <source src="/vid.mp4" type="video/mp4"/>
           </video> 
           <br></br>
 

@@ -6,13 +6,13 @@ import './custom.css'; // Make sure custom.css is imported here for the color sc
 
 // Sample images (you can replace these with your own images)
 const images = [
-  { src: '../public/one.jpg', alt: 'Slide 1' },
-  { src: '../public/one.webp', alt: 'Slide 2' },
-  { src: '../public/three.jpg', alt: 'Slide 3' },
-  { src: '../public/two.jpg', alt: 'Slide 4' },
-  { src: '../public/four.jpg', alt: 'Slide 5' },
-  { src: '../public/five.jpg', alt: 'Slide 6' },
-  { src: '../public/six.jpg', alt: 'Slide 7' },
+  { src: './one.jpg', alt: 'Slide 1' },
+  { src: './one.webp', alt: 'Slide 2' },
+  { src: './three.jpg', alt: 'Slide 3' },
+  { src: './two.jpg', alt: 'Slide 4' },
+  { src: './four.jpg', alt: 'Slide 5' },
+  { src: './five.jpg', alt: 'Slide 6' },
+  { src: './six.jpg', alt: 'Slide 7' },
 ];
 
 function GalleryCarousel() {
