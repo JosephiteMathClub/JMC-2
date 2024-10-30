@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import GalleryCarousel from './GalleryCarousel'
 import ContactForm from './ContactForm';
 import EventCard from './EventCard';
+import ScrollTo from './ScrollTo';
 import AboutCard from './AboutCard'; // Import the AboutCard component
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './App.css'
@@ -12,6 +13,8 @@ import './custom.css'
 function Home() {
   return (
     <div>
+      <ScrollTo /> {/* Component to handle smooth scroll */}
+
       <Navbar /> 
       <video autoPlay muted loop id="myVideo">
             <source src="/vid.mp4" type="video/mp4"/>
@@ -22,13 +25,24 @@ function Home() {
      
         {/* Add the AboutCard component here */}
         <section id="about">
-        <AboutCard />
+          <AboutCard />
         </section>
-        <GalleryCarousel />
- <EventCard />
 
+        {/* Gallery Section */}
+        <section id="gallery">
+          <GalleryCarousel />
+        </section>
+
+        {/* Events Section */}
+        <section id="events">
+          <EventCard />
+        </section>
       </div> 
-    <ContactForm />
+
+      {/* Contact Section */}
+      <section id="contact">
+        <ContactForm />
+      </section>
 
       <Footer />
 

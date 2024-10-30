@@ -14,4 +14,7 @@
 .glass-card p {
   color: #cce6ff;
 }
+html {
+  scroll-behavior: smooth;
+}
 

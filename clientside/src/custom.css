@@ -4,6 +4,10 @@
   --black: #070716;
   --dark-black: #000000;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: black !important;
 }

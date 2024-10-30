@@ -29,13 +29,13 @@ function Navbar() {
               <Link className="nav-link text-secondary" to="/home#about">About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-secondary" to="/events">Events</Link>
+              <Link className="nav-link text-secondary" to="/home#events">Events</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-secondary" to="/articles">Articles</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-secondary" to="/contact">Contact</Link>
+              <Link className="nav-link text-secondary" to="/home#contact">Contact</Link>
             </li>
           </ul>
         </div>
