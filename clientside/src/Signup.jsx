@@ -10,7 +10,7 @@ function Signup() {
   const [formData, setFormData] = useState({
     name: '',
     institute: '',
-    class: '',
+    classd: '',
     roll: '',
     section: '',
     phone: '',
@@ -54,8 +54,8 @@ function Signup() {
     <div>
       <Navbar />
       <div className="container mt-5">
-        <div className="card bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '500px', margin: 'auto' }}>
-          <h2 className="text-center text-primary mb-4">Registration</h2>
+        <div className="card --bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '500px', margin: 'auto' }}>
+          <h2 className="text-center --text-primary mb-4">Registration</h2>
           <form onSubmit={handleSubmit}>
             {/* Name */}
             <div className="form-floating mb-3">
@@ -67,9 +67,9 @@ function Signup() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                placeholder="Name"
+                placeholder=""
               />
-              <label htmlFor="name" className="text-secondary">Name</label>
+              <label htmlFor="name" className="--text-secondary">Name</label>
             </div>
 
             {/* Institute */}
@@ -82,9 +82,9 @@ function Signup() {
                 value={formData.institute}
                 onChange={handleChange}
                 required
-                placeholder="Institute"
+                placeholder=""
               />
-              <label htmlFor="institute" className="text-secondary">Institute</label>
+              <label htmlFor="institute" className="--text-secondary">Institute</label>
             </div>
 
             {/* Class */}
@@ -92,16 +92,16 @@ function Signup() {
               <input
                 type="number"
                 className="form-control bg-dark text-white border-primary"
-                id="class"
-                name="class"
-                value={formData.class}
+                id="classd"
+                name="classd"
+                value={formData.classd}
                 onChange={handleChange}
                 min="3"
                 max="12"
                 required
-                placeholder="Class"
+                placeholder=""
               />
-              <label htmlFor="class" className="text-secondary">Class</label>
+              <label htmlFor="classd" className="--text-secondary">Class</label>
             </div>
 
             {/* Roll */}
@@ -114,9 +114,9 @@ function Signup() {
                 value={formData.roll}
                 onChange={handleChange}
                 required
-                placeholder="Roll"
+                placeholder=""
               />
-              <label htmlFor="roll" className="text-secondary">Roll</label>
+              <label htmlFor="roll" className="--text-secondary">Roll</label>
             </div>
 
             {/* Section */}
@@ -129,9 +129,9 @@ function Signup() {
                 value={formData.section}
                 onChange={handleChange}
                 required
-                placeholder="Section"
+                placeholder=""
               />
-              <label htmlFor="section" className="text-secondary">Section</label>
+              <label htmlFor="section" className="--text-secondary">Section</label>
             </div>
 
             {/* Phone */}
@@ -145,9 +145,9 @@ function Signup() {
                 onChange={handleChange}
                 pattern="[0-9]{11}"
                 required
-                placeholder="Phone Number"
+                placeholder=""
               />
-              <label htmlFor="phone" className="text-secondary">Phone Number</label>
+              <label htmlFor="phone" className="--text-secondary">Phone Number</label>
             </div>
 
             {/* Email */}
@@ -160,9 +160,9 @@ function Signup() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="Email"
+                placeholder=""
               />
-              <label htmlFor="email" className="text-secondary">Email</label>
+              <label htmlFor="email" className="--text-secondary">Email</label>
             </div>
 
             {/* Password */}
@@ -175,9 +175,9 @@ function Signup() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                placeholder="Password"
+                placeholder=""
               />
-              <label htmlFor="password" className="text-secondary">Password</label>
+              <label htmlFor="password" className="--text-secondary">Password</label>
             </div>
 
             {/* Error Message */}
@@ -194,8 +194,8 @@ function Signup() {
           </form>
 
           <div className="text-center mt-3">
-            <p className="text-secondary">Already registered before?{' '}
-              <Link to="/login" className="text-primary">Click here</Link>
+            <p className="--text-secondary">Already registered before?{' '}
+              <Link to="/login" className="--text-primary">Click here</Link>
             </p>
           </div>
         </div>

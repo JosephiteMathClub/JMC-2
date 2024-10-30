@@ -17,7 +17,6 @@ app.use(cors());
 /** */
 const uri = process.env.MONGODB_URI; // MongoDB URI from .env
 const jwtSecret = process.env.JWT_SECRET; // JWT Secret from .env
-
 // Connect to MongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to MongoDB Atlas"))
@@ -25,10 +24,10 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Signup Endpoint
 app.post('/signup', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, name, institute, classd, roll, phone, section } = req.body;
   try {
     const hashedPassword = await bcrypt.hash(password, 10); // Hash password
-    const newUser = await User.create({ email, password: hashedPassword });
+    const newUser = await User.create({ email, password: hashedPassword, classd, roll, phone, section, name, institute });
     res.status(201).json({ message: "User created successfully", user: newUser });
   } catch (err) {
     console.error(err);

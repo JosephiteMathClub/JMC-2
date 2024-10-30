@@ -7,7 +7,7 @@ function Footer() {
     <footer className="custom-bg-black text-white py-5"> {/* Custom background */}
       <div className="container">
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <span className="logo text-primary fs-4">Josephite Math Club</span>
+          <span className="logo --text-primary fs-4">Josephite Math Club</span>
           <div className="d-flex social-links">
             <a href="https://www.facebook.com/2015JMC/photos" className="me-3 text-secondary">
               <i className="fab fa-facebook-f"></i>

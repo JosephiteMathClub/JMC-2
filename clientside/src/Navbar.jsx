@@ -6,9 +6,9 @@ import './custom.css'; // Import your CSS or SCSS file here if using custom colo
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg custom-bg-black"> {/* Custom class for background */}
+    <nav className="navbar navbar-expand-lg custom-bg-black"> {/* Custom classd for background */}
       <div className="container-fluid">
-        <Link className="navbar-brand text-primary" to="/home">JMC</Link>
+        <Link className="navbar-brand --text-primary" to="/home">JMC</Link>
         <button
           className="navbar-toggler"
           type="button"

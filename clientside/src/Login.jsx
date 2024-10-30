@@ -46,8 +46,8 @@ function Login() {
     <div>
       <Navbar />
       <div className="container mt-5">
-        <div className="card bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '400px', margin: 'auto' }}>
-          <h2 className="text-center text-primary mb-4">Login</h2>
+        <div className="card --bg-dark text-white p-4 shadow-lg" style={{ maxWidth: '400px', margin: 'auto' }}>
+          <h2 className="text-center --text-primary mb-4">Login</h2>
           <form onSubmit={handleSubmit}>
             {/* Email */}
             <div className="form-floating mb-3">
@@ -59,9 +59,9 @@ function Login() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="Email"
+                placeholder=""
               />
-              <label htmlFor="email" className="text-secondary">Email</label>
+              <label htmlFor="email" className="--text-secondary">Email</label>
             </div>
 
             {/* Password */}
@@ -74,9 +74,9 @@ function Login() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                placeholder="Password"
+                placeholder=""
               />
-              <label htmlFor="password" className="text-secondary">Password</label>
+              <label htmlFor="password" className="--text-secondary">Password</label>
             </div>
 
             {/* Error Message */}
@@ -93,8 +93,8 @@ function Login() {
           </form>
 
           <div className="text-center mt-3">
-            <p className="text-secondary">Don't have an account?{' '}
-              <Link to="/signup" className="text-primary">Click here</Link>
+            <p className="--text-secondary">Don't have an account?{' '}
+              <Link to="/signup" className="--text-primary">Click here</Link>
             </p>
           </div>
         </div>
