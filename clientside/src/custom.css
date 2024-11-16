@@ -48,6 +48,23 @@ footer a:hover {
 .--text-primary {
   color: var(--primary) !important;
 }
+.--card{
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.nav-link .active{
+  border: 1px solid white;
+    border-radius: 15px;
+
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: var(--secondary) !important;
+}
 
 .text-secondary {
   color: var(--secondary) !important;
@@ -158,3 +175,26 @@ body {
 .event-card:hover {
   transform: scale(1.05); /* Slightly enlarge the card on hover */
 }
+
+
+.skeleton {
+  background-color: #e0e0e0;
+  height: 20px;
+  width: 100%;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #c0c0c0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+ul{
+list-style: none;}

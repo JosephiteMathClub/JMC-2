@@ -1,0 +1,122 @@
+/* AdminDashboard.css */
+
+/* Page Background */
+.admin-dashboard {
+    background-color: #1b1e2f; /* Dark blue-black background */
+    color: #ffffff;
+    padding: 2rem;
+  }
+  
+  /* Header Style */
+  .editor-form h2,
+  .article-cards h2 {
+    color: #66b2ff;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Web Editor Form */
+  .editor-form {
+    background-color: #252a3b;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .editor-form .form-label {
+    color: #a3c9ff;
+  }
+  
+  .editor-form .form-control {
+    background-color: #33394d;
+    color: #ffffff;
+    border: 1px solid #66b2ff;
+  }
+  
+  .editor-form .form-control:focus {
+    background-color: #3d435a;
+    color: #ffffff;
+    border-color: #a3c9ff;
+  }
+  
+  .editor-form .btn-primary {
+    background-color: #66b2ff;
+    border-color: #66b2ff;
+  }
+  
+  .editor-form .btn-primary:hover {
+    background-color: #529bcc;
+    border-color: #529bcc;
+  }
+  
+  /* Article Card Style */
+  .article-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background-color: #252a3b;
+    border: none;
+    color: #ffffff;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .card img {
+    border-radius: 4px;
+  }
+  
+  .card .card-title {
+    color: #66b2ff;
+    font-weight: bold;
+  }
+  
+  .card .card-text {
+    color: #a3c9ff;
+  }
+  
+  .card .btn-primary {
+    background-color: #66b2ff;
+    border: none;
+  }
+  
+  .card .btn-primary:hover {
+    background-color: #529bcc;
+  }
+  
+  /* Modal (Expanded Article View) */
+  .modal-content {
+    background-color: #1b1e2f;
+    color: #ffffff;
+  }
+  
+  .modal-body img {
+    border-radius: 8px;
+  }
+  
+  .modal-body h3 {
+    color: #66b2ff;
+  }
+  
+  .modal-body p {
+    color: #a3c9ff;
+  }
+  
+  .modal .btn-secondary {
+    background-color: #3d435a;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .modal .btn-secondary:hover {
+    background-color: #52586a;
+  }
+  

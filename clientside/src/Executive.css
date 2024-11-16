@@ -1,0 +1,87 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .pagination .btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .pagination .btn.active,
+  .pagination .btn:hover {
+    background: var(--primary);;
+    color: #333;
+  }
+  
+  /* Container for Glass Cards */
+  /*.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }*/
+  
+  /* Glass Card */
+
+  
+  .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-div {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .card-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-div:hover img {
+    transform: scale(1.1);
+  }
+  
+
+  /* Responsive Design */
+  /*
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem 1rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .pagination .btn {
+      padding: 0.3rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .glass-card {
+      width: 90%;
+      max-width: 300px;
+    }
+  }
+  */

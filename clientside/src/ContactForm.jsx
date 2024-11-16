@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './App.css'; // Assuming your custom CSS is in App.css
+import './App.css';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,6 +10,7 @@ function ContactForm() {
   });
 
   const [statusMessage, setStatusMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,11 +22,20 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Show "Submitting"
+    setStatusMessage('');  // Clear any previous message
+
     try {
       const response = await axios.post('http://localhost:3001/contact', formData);
-      setStatusMessage('Message sent successfully!');
+      if (response.status === 200) {
+        setStatusMessage('Message sent successfully!');
+      } else {
+        setStatusMessage('Error sending message. Please try again.');
+      }
     } catch (error) {
       setStatusMessage('Error sending message. Please try again.');
+    } finally {
+      setIsSubmitting(false); // Hide "Submitting" after response
     }
   };
 
@@ -71,7 +81,9 @@ function ContactForm() {
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="btn btn-primary">Send Message</button>
+            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Send Message'}
+            </button>
           </div>
         </form>
         {statusMessage && <p className="text-center mt-3 text-secondary">{statusMessage}</p>}

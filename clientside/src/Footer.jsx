@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
 import './custom.css'
+import "bootstrap-icons/font/bootstrap-icons.css";
 function Footer() {
   return (
     <footer className="custom-bg-black text-white py-5"> {/* Custom background */}
@@ -10,10 +11,10 @@ function Footer() {
           <span className="logo --text-primary fs-4">Josephite Math Club</span>
           <div className="d-flex social-links">
             <a href="https://www.facebook.com/2015JMC/photos" className="me-3 text-secondary">
-              <i className="fab fa-facebook-f"></i>
+              <i className="bi bi-facebook"></i>
             </a>
             <a href="https://www.instagram.com/jmc_._official/" className="text-secondary">
-              <i className="fab fa-instagram"></i>
+              <i className="bi bi-instagram"></i>
             </a>
           </div>
         </div>
@@ -23,8 +24,8 @@ function Footer() {
           <div className="col-6 col-md-3 mb-3">
             <h5 className="footer-cat">About</h5>
             <ul className="footer-cat-links list-unstyled">
-              <li><a href="executive.html" className="text-secondary">Executive Members</a></li>
-              <li><a href="motto.html" className="text-secondary">Club Motto</a></li>
+              <li><a href="/executive" className="text-secondary">Executive Members</a></li>
+              <li><a href="/motto" className="text-secondary">Club Motto</a></li>
               <li><a href="#" className="text-secondary">Club History</a></li>
             </ul>
           </div>
@@ -33,7 +34,7 @@ function Footer() {
           <div className="col-6 col-md-3 mb-3">
             <h5 className="footer-cat">Resources</h5>
             <ul className="footer-cat-links list-unstyled">
-              <li><a href="#gallery" className="text-secondary">Gallery</a></li>
+              <li><a href="/home#gallery" className="text-secondary">Gallery</a></li>
               <li><a href="#" className="text-secondary">Magazine Draft</a></li>
               <li><a href="#" className="text-secondary">Math Problems</a></li>
               <li><a href="#" className="text-secondary">Mock Tests</a></li>
@@ -45,10 +46,12 @@ function Footer() {
           <div className="col-6 col-md-3 mb-3">
             <h5 className="footer-cat">Quick Links</h5>
             <ul className="footer-cat-links list-unstyled">
-              <li><a href="#home" className="text-secondary">Home</a></li>
-              <li><a href="#events" className="text-secondary">Events</a></li>
-              <li><a href="#articles" className="text-secondary">Articles</a></li>
-              <li><a href="#contact" className="text-secondary">Contact</a></li>
+              <li><a href="/home#home" className="text-secondary">Home</a></li>
+              <li><a href="/home#events" className="text-secondary">Events</a></li>
+              <li><a href="/article" className="text-secondary">Articles</a></li>
+              <li><a href="/home#contact" className="text-secondary">Contact</a></li>
+              <li><a href="/admin" className="text-secondary">Admin</a></li>
+
             </ul>
           </div>
 

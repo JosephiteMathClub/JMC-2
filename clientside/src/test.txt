@@ -3,8 +3,10 @@ import axios from 'axios';
 import { Card, Button, Form, Modal, Alert, Spinner, Nav, Tab, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './AdminDashboard.css';  // Assume this file contains blue and black theme styling
-
-const AdminDashboard = () => {
+import './custom.css'
+import './app.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";const AdminDashboard = () => {
   const [articleDetails, setArticleDetails] = useState({
     title: '',
     text: '',
@@ -66,6 +68,12 @@ const AdminDashboard = () => {
       setFeedback({ type: 'danger', message: "Error adding article." });
     }
   };
+  const handleReadMore = (article) => {
+    setExpandedArticle(article);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => setShowModal(false);
 
   // Quiz Functions
   const handleQuizInputChange = (e) => {

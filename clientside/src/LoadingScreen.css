@@ -1,0 +1,38 @@
+/* Full-screen overlay */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0 0 0 / 88%); /* Semi-transparent blur effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Integral sign styling */
+.integral-sign {
+  font-size: 100px;
+  color: #ffffff;
+  animation: fade 1.5s infinite alternate;
+}
+
+/* Text styling */
+.loading-text {
+  margin-top: -71px;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 11px;
+  margin-left: 41px;
+}
+
+/* Fade animation for integrand symbol */
+@keyframes fade {
+  0% { opacity: 0.2; }
+  50% {opacity: 0.5;}
+  100% { opacity: 1; }
+}

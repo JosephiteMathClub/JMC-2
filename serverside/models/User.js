@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
   quizzes: [
     {
+      title: String,
       quizId: mongoose.Schema.Types.ObjectId,
       score: Number,
       individualScores: [

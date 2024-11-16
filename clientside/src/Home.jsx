@@ -6,6 +6,7 @@ import GalleryCarousel from './GalleryCarousel'
 import ContactForm from './ContactForm';
 import EventCard from './EventCard';
 import ScrollTo from './ScrollTo';
+import LoadingScreen from './LoadingScreen'
 import AboutCard from './AboutCard'; // Import the AboutCard component
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './App.css'
@@ -14,7 +15,7 @@ function Home() {
   return (
     <div>
       <ScrollTo /> {/* Component to handle smooth scroll */}
-
+    <LoadingScreen/>
       <Navbar /> 
       <video autoPlay muted loop id="myVideo">
             <source src="/vid.mp4" type="video/mp4"/>

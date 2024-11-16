@@ -32,7 +32,7 @@ function Navbar() {
               <Link className="nav-link text-secondary" to="/home#events">Events</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-secondary" to="/articles">Articles</Link>
+              <Link className="nav-link text-secondary" to="/article">Articles</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link text-secondary" to="/home#contact">Contact</Link>

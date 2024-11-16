@@ -6,6 +6,10 @@ import Signup from './Signup';
 import Home from './Home';
 import NotFound  from './NotFound';
 import Dashboard from './Dashboard';
+import AdminLogin from './AdminLogin';
+import AdminDashboard from './AdminDashboard'
+import ArticlePage from './ArticlePage';
+import Executive from './Executive';
 import './App.css'
 import './custom.css'
 function App() {
@@ -16,6 +20,10 @@ function App() {
   <Route path='/login' element={<Login />}></Route>
   <Route path='/home' element={<Home />}></Route>
   <Route path='/dashboard' element={<Dashboard />}></Route>
+  <Route path='/admin' element={<AdminLogin />}></Route>
+  <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
+  <Route path='/article' element={<ArticlePage />}></Route>
+  <Route path='/executive' element={<Executive />}></Route>
 
   <Route path='/' element={<Home />}></Route>
   <Route path="*" element={<NotFound />} />

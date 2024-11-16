@@ -1,0 +1,151 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './AdminDashboard.css';
+import { Card, Button, Form, Modal, Alert, Spinner } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
+const AdminDashboard = () => {
+  const [articleDetails, setArticleDetails] = useState({
+    title: '',
+    text: '',
+    imageUrl: '',
+    writerName: '',
+    publishDate: ''
+  });
+
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [expandedArticle, setExpandedArticle] = useState(null);
+  const [feedback, setFeedback] = useState(null);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
+
+  const fetchArticles = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get('http://localhost:3001/article');
+      setArticles(response.data);
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setArticleDetails({ ...articleDetails, [name]: value });
+  };
+
+  const handleAddArticle = async () => {
+    const token = localStorage.getItem('adminToken');
+    if (!token) {
+      navigate('/adminlogin');
+      return;
+    }
+
+    try {
+      await axios.post('/article', articleDetails, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setFeedback({ type: 'success', message: "Article published successfully!" });
+      fetchArticles();
+      setArticleDetails({ title: '', text: '', imageUrl: '', writerName: '', publishDate: '' });
+    } catch (error) {
+      console.error("Error adding article:", error);
+      setFeedback({ type: 'danger', message: "Error adding article." });
+    }
+  };
+
+  const handleReadMore = (article) => {
+    setExpandedArticle(article);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => setShowModal(false);
+
+  return (
+    <div className="admin-dashboard container">
+      <div className="editor-form">
+        <h2>Add New Article</h2>
+        <Form>
+          <Form.Group controlId="title">
+            <Form.Label>Title</Form.Label>
+            <Form.Control type="text" name="title" value={articleDetails.title} onChange={handleInputChange} />
+          </Form.Group>
+          <Form.Group controlId="imageUrl">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control type="text" name="imageUrl" value={articleDetails.imageUrl} onChange={handleInputChange} />
+          </Form.Group>
+          <Form.Group controlId="text">
+            <Form.Label>Text</Form.Label>
+            <Form.Control as="textarea" rows={3} name="text" value={articleDetails.text} onChange={handleInputChange} />
+          </Form.Group>
+          <Form.Group controlId="writerName">
+            <Form.Label>Writer's Name</Form.Label>
+            <Form.Control type="text" name="writerName" value={articleDetails.writerName} onChange={handleInputChange} />
+          </Form.Group>
+          <Form.Group controlId="publishDate">
+            <Form.Label>Publish Date</Form.Label>
+            <Form.Control type="date" name="publishDate" value={articleDetails.publishDate} onChange={handleInputChange} />
+          </Form.Group>
+          <Button variant="primary" onClick={handleAddArticle} disabled={loading}>
+            {loading ? <Spinner animation="border" size="sm" /> : 'Publish Article'}
+          </Button>
+          {feedback && <Alert variant={feedback.type} className="mt-3">{feedback.message}</Alert>}
+        </Form>
+      </div>
+
+      <div className="article-cards">
+        <h2>All Articles</h2>
+        {loading ? (
+          <Spinner animation="border" />
+        ) : (
+          <div className="card-deck">
+            {Array.isArray(articles) && articles.length > 0 ? (
+              articles.map((article) => (
+                <Card key={article._id} className="mb-4">
+                  <Card.Img
+                    variant="top"
+                    src={article.imageUrl}
+                    style={{ height: '200px', objectFit: 'cover' }}
+                  />
+                  <Card.Body>
+                    <Card.Title>{article.title}</Card.Title>
+                    <Card.Text>by {article.writerName}</Card.Text>
+                    <Button variant="primary" onClick={() => handleReadMore(article)}>
+                      Read More
+                    </Button>
+                  </Card.Body>
+                </Card>
+              ))
+            ) : (
+              <p>No articles available.</p>
+            )}
+          </div>
+        )}
+      </div>
+
+      <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Body>
+          {expandedArticle && (
+            <>
+              <img src={expandedArticle.imageUrl} alt={expandedArticle.title} style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }} />
+              <h3>{expandedArticle.title}</h3>
+              <p><strong>{expandedArticle.writerName}</strong> - {expandedArticle.publishDate}</p>
+              <p>{expandedArticle.text}</p>
+              <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
+            </>
+          )}
+        </Modal.Body>
+      </Modal>
+    </div>
+  );
+};
+
+export default AdminDashboard;
