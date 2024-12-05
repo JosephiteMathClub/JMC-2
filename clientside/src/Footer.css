@@ -7,18 +7,18 @@ footer {
   }
   
   .footer-cat {
-    color: #6c757d;
+    color: #888484;
     font-weight: 600;
     margin-bottom: 10px;
   }
   
   .footer-cat-links a {
     text-decoration: none;
-    color: #adb5bd;
+    color: #ffffff;
   }
   
   .footer-cat-links a:hover {
-    color: #0d6efd;
+    color: var(--primary);
   }
   
   .footer-cat-links li {
@@ -27,12 +27,12 @@ footer {
   
   .social-links a {
     font-size: 1.25rem;
-    color: #adb5bd;
+    color: #ffffff;
     transition: color 0.2s;
   }
   
   .social-links a:hover {
-    color: #0d6efd;
+    color: var(--primary);
   }
   
   #address div {

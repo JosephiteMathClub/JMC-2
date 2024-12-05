@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './App.css';
+import './App.css'; // Custom styles
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -22,8 +22,8 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true); // Show "Submitting"
-    setStatusMessage('');  // Clear any previous message
+    setIsSubmitting(true);
+    setStatusMessage('');
 
     try {
       const response = await axios.post('http://localhost:3001/contact', formData);
@@ -35,58 +35,64 @@ function ContactForm() {
     } catch (error) {
       setStatusMessage('Error sending message. Please try again.');
     } finally {
-      setIsSubmitting(false); // Hide "Submitting" after response
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="container my-5">
-      <div className="glass-card p-4">
-        <h2 className="text-center mb-4 --text-primary">Contact Us</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="name" className="form-label text-secondary">Name</label>
-            <input
-              type="text"
-              className="form-control custom-bg-black text-white border-secondary"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+      <div className="row justify-content-center">
+        <div className="col-lg-6">
+          <div className="apple-card p-5 rounded">
+            <h2 className="text-center mb-4 --section-text --text-primary">Contact Us</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="input-wrapper mb-4">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="name">Your Name</label>
+              </div>
+              <div className="input-wrapper mb-4">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="email">Your Email</label>
+              </div>
+              <div className="input-wrapper mb-4">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder=" "
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+                <label htmlFor="message">Your Message</label>
+              </div>
+              <div className="text-center">
+                <button type="submit" className="apple-button" disabled={isSubmitting}>
+                  {isSubmitting ? 'Sending...' : 'Send'}
+                </button>
+              </div>
+            </form>
+            {statusMessage && (
+              <p className="text-center mt-4 status-message">{statusMessage}</p>
+            )}
           </div>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label text-secondary">Email</label>
-            <input
-              type="email"
-              className="form-control custom-bg-black text-white border-secondary"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="message" className="form-label text-secondary">Message</label>
-            <textarea
-              className="form-control custom-bg-black text-white border-secondary"
-              id="message"
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-              {isSubmitting ? 'Submitting...' : 'Send Message'}
-            </button>
-          </div>
-        </form>
-        {statusMessage && <p className="text-center mt-3 text-secondary">{statusMessage}</p>}
+        </div>
       </div>
     </div>
   );

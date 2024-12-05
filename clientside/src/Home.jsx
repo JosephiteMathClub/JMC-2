@@ -7,6 +7,8 @@ import ContactForm from './ContactForm';
 import EventCard from './EventCard';
 import ScrollTo from './ScrollTo';
 import LoadingScreen from './LoadingScreen'
+import HeroSection from './HeroSection';
+import Objectives from './Objectives';
 import AboutCard from './AboutCard'; // Import the AboutCard component
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './App.css'
@@ -17,9 +19,7 @@ function Home() {
       <ScrollTo /> {/* Component to handle smooth scroll */}
     <LoadingScreen/>
       <Navbar /> 
-      <video autoPlay muted loop id="myVideo">
-            <source src="/vid.mp4" type="video/mp4"/>
-          </video> 
+    <HeroSection/>
           <br></br>
 
       <div className="container my-5 text-center">
@@ -28,7 +28,7 @@ function Home() {
         <section id="about">
           <AboutCard />
         </section>
-
+        <Objectives/>
         {/* Gallery Section */}
         <section id="gallery">
           <GalleryCarousel />

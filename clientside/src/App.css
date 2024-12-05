@@ -1,3 +1,30 @@
+.about-section {
+  background: linear-gradient(145deg, #000000, #05121f); /* Blueish dark gradient */
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.about-section h2 {
+  color: var(--primary); /* Neon-style blue for the heading */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .glass-card {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
@@ -5,6 +32,7 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition for both scaling and shadow */
 
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -18,3 +46,95 @@ html {
   scroll-behavior: smooth;
 }
 
+.--section-text{
+font-weight: 300;
+font-size: calc(1.425rem + 1.1vw);
+}
+
+
+/* Contact Form Styling */
+/* Contact Card */
+.apple-card {
+  background: linear-gradient(145deg,  #000000, #05121f);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+
+
+/* Input Fields */
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #3a3a3a;
+  color: #eaeaea;
+  font-size: 1rem;
+  padding: 10px 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+  border-bottom: 2px solid #007aff; /* Apple-like blue */
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 1rem;
+  color: #6c6c6c;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus ~ label,
+.input-wrapper input:not(:placeholder-shown) ~ label,
+.input-wrapper textarea:focus ~ label,
+.input-wrapper textarea:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 0.9rem;
+  color: #007aff;
+}
+
+/* Button */
+.apple-button {
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(145deg, #007aff, #005ecb);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apple-button:hover {
+  background: linear-gradient(145deg, #005ecb, #007aff);
+  box-shadow: 0 5px 15px rgba(0, 122, 255, 0.4);
+}
+
+/* Status Message */
+.status-message {
+  font-size: 0.9rem;
+  color: #4caf50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .apple-card {
+    padding: 1.5rem;
+  }
+}

@@ -115,7 +115,7 @@ axios.get(`http://localhost:3001/api/quiz?class=${user.classd}`, {
     <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
       <div className="d-flex flex-grow-1">
         <nav className="--card --bg-dark p-3" style={{ minWidth: '250px', minHeight: '500px' }} role="tablist">
-          <h4 className="text-center --text-primary">Dashboard</h4>
+          <h4 className="text-center --text-primary --section-text">Dashboard</h4>
           <ul className="nav flex-column">
             <li className="nav-item">
               <Link className="nav-link" to="#profile" data-bs-toggle="tab" role="tab">
@@ -138,16 +138,16 @@ axios.get(`http://localhost:3001/api/quiz?class=${user.classd}`, {
         <div className="flex-grow-1 p-4 --text-secondary">
           <div className="tab-content" id="myTabContent">
             <div className="tab-pane fade" id="profile" role="tabpanel">
-              <h3 className="--text-primary">Profile</h3>
+              <h3 className="--text-primary --section-text">Profile</h3>
               {userData ? (
                 <div>
-                  <p><strong>Name:</strong> {userData.name}</p>
-                  <p><strong>Email:</strong> {userData.email}</p>
-                  <p><strong>Institute:</strong> {userData.institute}</p>
-                  <p><strong>Class:</strong> {userData.classd}</p>
-                  <p><strong>Roll:</strong> {userData.roll}</p>
-                  <p><strong>Section:</strong> {userData.section}</p>
-                  <p><strong>Phone:</strong> {userData.phone}</p>
+                  <p><strong class="--text-primary">Name:</strong> {userData.name}</p>
+                  <p><strong class="--text-primary">Email:</strong> {userData.email}</p>
+                  <p><strong class="--text-primary">Institute:</strong> {userData.institute}</p>
+                  <p><strong class="--text-primary">Class:</strong> {userData.classd}</p>
+                  <p><strong class="--text-primary">Roll:</strong> {userData.roll}</p>
+                  <p><strong class="--text-primary">Section:</strong> {userData.section}</p>
+                  <p><strong class="--text-primary">Phone:</strong> {userData.phone}</p>
                 </div>
               ) : (
                 <p>Loading user data...</p>
@@ -155,7 +155,7 @@ axios.get(`http://localhost:3001/api/quiz?class=${user.classd}`, {
             </div>
 
             <div className="tab-pane fade" id="quizzes" role="tabpanel">
-            <h3>Quizzes</h3>
+            <h3 class="--text-primary --section-text">Quizzes</h3>
   {loading ? (
     <div className="skeleton"></div>
   ) : (
@@ -166,7 +166,8 @@ axios.get(`http://localhost:3001/api/quiz?class=${user.classd}`, {
         <div key={quiz._id} className="mb-3 card">
           <div className="card-body">
             <h5 className="card-title">{quiz.title || "Untitled Quiz"}</h5>
-            <p>Time: {quiz.timeAllocation} mins | Total Marks: {quiz.totalMarks}</p>
+            {/*Time: {quiz.timeAllocation} mins |*/}
+            <p> Total Marks: {quiz.totalMarks}</p>
             <button
               className="btn btn-primary mb-2"
               onClick={() => handleParticipate(quiz._id)}
@@ -229,7 +230,7 @@ axios.get(`http://localhost:3001/api/quiz?class=${user.classd}`, {
             </div>
 
             <div className="tab-pane fade" id="events" role="tabpanel">
-              <h3>Events</h3>
+              <h3 class="--text-primary --section-text">Events</h3>
               <p>Upcoming events will be displayed here.</p>
             </div>
           </div>

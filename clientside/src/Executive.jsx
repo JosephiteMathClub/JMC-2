@@ -34,7 +34,7 @@ const ExecutiveMemberCard = ({ imgSrc, name, position }) => (
       <img src={imgSrc} alt={`${name}`} className="card-img img-fluid rounded" />
     </div>
     <div className="content mt-3 text-center">
-      <h2 className="h5 text-warning">{name}</h2>
+      <h2 className="h5 --text-secondary">{name}</h2>
       <p className="text-light">{position}</p>
     </div>
   </div>
@@ -42,7 +42,7 @@ const ExecutiveMemberCard = ({ imgSrc, name, position }) => (
 
 const ExecutivePanel = ({ title, members }) => (
   <div className="section">
-    <h2 className="section-title text-center mb-4" style={{ fontWeight: 'lighter' }}>{title}</h2>
+    <h2 className="--text-primary --section-title text-center mb-4" style={{ fontWeight: 'lighter' }}>{title}</h2>
     <div className="container">
       <div className="row justify-content-center">
         {members.map((member, index) => (
@@ -77,16 +77,16 @@ const Executive = () => {
   ];
 
   const recentPanel = [
-    { imgSrc: 'ec/former/one.jpg', name: 'Rakibul Islam Rony', position: 'President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Ishmaam Zarif', position: 'Deputy President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Md Ashfaqul Hasan', position: 'Vice President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Tahsin Abdullah', position: 'Vice President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Iftakhar Tausif Nur', position: 'Vice President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Arafat Ahmed Rony', position: 'Vice President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Hasin Israq', position: 'Vice President' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Tahmid Rahman', position: 'Asst. General Secretary' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Aditto Saha', position: 'Asst. General Secretary' },
-    { imgSrc: 'ec/former/one.jpg', name: 'Mahir Tajwar', position: 'General Secretary' },
+    { imgSrc: 'ec/prev/one.jpg', name: 'Rakibul Islam Rony', position: 'President' },
+    { imgSrc: 'ec/prev/two.jpg', name: 'Ishmaam Zarif', position: 'Deputy President' },
+    { imgSrc: 'ec/prev/three.jpg', name: 'Md Ashfaqul Hasan', position: 'Vice President' },
+    { imgSrc: 'ec/prev/five.jpg', name: 'Tahsin Abdullah', position: 'Vice President' },
+    { imgSrc: 'ec/prev/six.jpg', name: 'Iftakhar Tausif Nur', position: 'Vice President' },
+    { imgSrc: 'ec/prev/four.jpg', name: 'Arafat Ahmed Rony', position: 'Vice President' },
+    { imgSrc: 'ec/prev/seven.jpg', name: 'Hasin Israq', position: 'Vice President' },
+    { imgSrc: 'ec/prev/ten.jpg', name: 'Tahmid Rahman', position: 'Asst. General Secretary' },
+    { imgSrc: 'ec/prev/twelve.jpg', name: 'Aditto Saha', position: 'Asst. General Secretary' },
+    { imgSrc: 'ec/prev/eight.jpg', name: 'Mahir Tajwar', position: 'General Secretary' },
   ];
 
   const formerPanel = []; // Add any members you wish to display in this panel
@@ -94,7 +94,7 @@ const Executive = () => {
   return (
     <div>
       <Navbar />
-      <h2 className="section-title text-center" style={{ paddingTop: '18vh' }}>Executive Members</h2>
+      <h2 className="--text-primary --section-title text-center" style={{ paddingTop: '18vh' }}>Executive Members</h2>
       <PaginationButtons activePanel={activePanel} setActivePanel={setActivePanel} />
       {activePanel === 'current' && <ExecutivePanel title="Executive Panel 23-24" members={currentPanel} />}
       {activePanel === 'recent' && <ExecutivePanel title="Executive Panel 22-23" members={recentPanel} />}

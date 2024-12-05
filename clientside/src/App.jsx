@@ -10,6 +10,7 @@ import AdminLogin from './AdminLogin';
 import AdminDashboard from './AdminDashboard'
 import ArticlePage from './ArticlePage';
 import Executive from './Executive';
+import MottoPage from './MottoPage';
 import './App.css'
 import './custom.css'
 function App() {
@@ -24,6 +25,7 @@ function App() {
   <Route path="/admindashboard" element={<AdminDashboard/>}></Route>
   <Route path='/article' element={<ArticlePage />}></Route>
   <Route path='/executive' element={<Executive />}></Route>
+  <Route path='/motto' element={<MottoPage />}></Route>
 
   <Route path='/' element={<Home />}></Route>
   <Route path="*" element={<NotFound />} />

@@ -247,10 +247,10 @@ const AdminDashboard = () => {
                 <Form.Label>Quiz Title</Form.Label>
                 <Form.Control type="text" name="title" value={quizDetails.title} onChange={handleQuizInputChange} />
               </Form.Group>
-              <Form.Group controlId="timeAllocation">
+              {/*<Form.Group controlId="timeAllocation">
                 <Form.Label>Time Allocation (minutes)</Form.Label>
                 <Form.Control type="number" name="timeAllocation" value={quizDetails.timeAllocation} onChange={handleQuizInputChange} />
-              </Form.Group>
+              </Form.Group>*/}
               <Form.Label>Classes Allowed</Form.Label>
               <div className="mb-3">
                 {[3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((classNum) => (

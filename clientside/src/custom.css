@@ -1,8 +1,9 @@
 :root {
-  --primary: #00aaff;
-  --secondary: #cce6ff;
+  --primary: #007aff;
+  --secondary: #fe53bb;
   --black: #070716;
   --dark-black: #000000;
+  --background: black;
 }
 html {
   scroll-behavior: smooth;
@@ -13,29 +14,80 @@ body{
 }
 /* Add a hover effect to navbar links */
 .navbar-nav .nav-link {
-  color: var(--secondary); /* Set initial color */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+  color: var(--secondary); /* Initial color */
+  font-size: 1.1rem; /* Increase the font size */
+  padding: 0.5rem 1rem; /* Adjust padding for closer spacing */
+  position: relative; /* To position the underline */
+  transition: color 0.3s ease; /* Smooth transition for color */
 }
 
 .navbar-nav .nav-link:hover {
   color: var(--primary) !important; /* Hover color */
 }
+.navbar-nav .nav-link::after {
+  content: ""; /* Empty content for the underline */
+  position: absolute;
+  bottom: 0; /* Place the underline at the bottom */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--primary); /* Color of the underline */
+  transition: width 0.3s ease; /* Animation for the underline */
+}
+
+/* On hover, expand the underline */
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Expand the underline */
+}
+/* Custom active link style with underline */
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+/* Navbar brand (Logo) */
+.navbar-brand {
+  font-size: 1.5rem; /* Make the brand name slightly larger */
+  color: var(--primary) !important;
+  font-weight: bold;
+}
+/* Adjust the navbar items for mobile view */
+
+
+/**/
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary); /* Change color on hover */
+}
+.nav-link .active{
+  border: 1px solid white;
+    border-radius: 15px;
+
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: var(--secondary) !important;
+}
+.navbar-dark .navbar-brand {
+  color: var(--primary) !important;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: bold; /* Optional */
+}
+/**/
+
+
+/**Navbar end**/
 
 footer a {
   color: var(--secondary); /* Set initial color */
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
 }
-
-
-footer a:hover {
-  color: var(--primary) !important; /* Hover color */
-  transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--secondary) !important;
   opacity: 1; /* Firefox */
 }
+
 /* Custom Background and Text Colors */
 .custom-bg-black {
   background-color: var(--black) !important;
@@ -56,15 +108,7 @@ footer a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.nav-link .active{
-  border: 1px solid white;
-    border-radius: 15px;
 
-}
-
-.nav-link:focus, .nav-link:hover {
-  color: var(--secondary) !important;
-}
 
 .text-secondary {
   color: var(--secondary) !important;
@@ -76,21 +120,6 @@ footer a:hover {
   background-color: var(--dark-black) !important;
 }
 
-/* Additional Bootstrap Overrides if needed */
-.navbar-dark .navbar-brand {
-  color: var(--primary) !important;
-}
-.navbar-dark .navbar-toggler-icon {
-  background-color: var(--secondary); /* or any other custom color variable */
-}
-.nav-link.active {
-  color: var(--primary);
-  font-weight: bold; /* Optional */
-}
-
-#myVideo {
-  min-width: 100%;
-}
 
 body {
   overflow-x: hidden;
@@ -113,7 +142,7 @@ body {
 
 /* Optional: Hover effect on scrollbar */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: darken(var(--primary), 10%); /* Slightly darker thumb on hover */
+  filter: brightness(85%);
 }
 
 
@@ -198,3 +227,131 @@ body {
 }
 ul{
 list-style: none;}
+
+/*hero*/
+.hero-section {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.timer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-box {
+  text-align: center;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 0 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-math-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.math-icon {
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--primary);
+  position: absolute;
+  animation: float 10s infinite ease-in-out, spin 22s infinite linear;
+  opacity: 0.8;
+  text-shadow: 0px 4px 8px rgba(0, 170, 255, 0.5);
+}
+
+.math-icon:nth-child(1) { top: 2%; left: 10%; animation-delay: 0s; }
+.math-icon:nth-child(2) { top: 15%; right: 15%; animation-delay: 1s; }
+.math-icon:nth-child(3) { bottom: 10%; left: 30%; animation-delay: 2s; }
+.math-icon:nth-child(4) { bottom: 5%; right: 10%; animation-delay: 3s; }
+.math-icon:nth-child(5) { top: 43%; left: 50%; animation-delay: 4s; }
+.math-icon:nth-child(6) { top: 20%; right: 30%; animation-delay: 5s; }
+.math-icon:nth-child(7) { bottom: 20%; left: 20%; animation-delay: 6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hero-title-container {
+  height: 100%; /* Ensures full alignment in the row */
+  padding-left: 3rem; /* Adds some left padding */
+}
+
+.hero-section .display-4 {
+  text-align: left; /* Aligns text to the left */
+}
+
+.d-block {
+  display: block; /* Forces each word onto its own line */
+}
+
+@media (max-width: 768px) {
+  .hero-title-container {
+    padding-left: 1rem; /* Adjusts for smaller screens */
+  }
+}
+
+
+
+/*test glow*/
+.hero-curve {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem; /* Space between the hero section and the curve */
+  overflow: hidden; /* Ensure it doesn’t spill out */
+}
+
+.glassy-curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0px -10px 20px rgba(0, 170, 255, 0.5)); /* Glow effect */
+}
+
+
+.eventbtn {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, var(--primary), #3c4fe0);
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all 0.2s ease-out;
+}
+
+.eventbtn:hover {
+  box-shadow: 
+    0 0 10px #3c4fe0,   /* Inner glow */
+    0 0 20px #3c4fe0,   /* Outer glow */
+    0 0 30px #3c4fe0,   /* More spread */
+    0 8px 22px 0 rgb(37 44 97 / 15%), 
+    0 4px 6px 0 rgb(93 100 148 / 20%);
+  transition: all 0.4s ease-out; /* Slightly slower for smooth glow */
+}

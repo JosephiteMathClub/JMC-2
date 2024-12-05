@@ -1,0 +1,66 @@
+h2 {
+    font-size: 2rem;
+    color: #eaeaea;
+    text-transform: uppercase;
+  }
+  
+  /* Objective Boxes */
+  .objective-box {
+    background-color: transparent;
+    border: 2px solid #007aff; /* Blue outline */
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: #eaeaea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .objective-box i {
+    color: #007aff; /* Blue icon */
+    margin-bottom: 1rem;
+  }
+  
+  .objective-box h4 {
+    color: #007aff; /* Blue text for titles */
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .objective-box p {
+    color: #d3d3d3;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  /* Hover effects */
+  .objective-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 122, 255, 0.3);
+  }
+  
+  /* Font Awesome icons */
+  .fas {
+    transition: color 0.3s ease;
+  }
+  
+  .objective-box:hover i {
+    color: #fff; /* Change icon color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .objective-box {
+      padding: 1.5rem;
+    }
+  
+    .objective-box h4 {
+      font-size: 1.2rem;
+    }
+  
+    .objective-box p {
+      font-size: 0.9rem;
+    }
+  }

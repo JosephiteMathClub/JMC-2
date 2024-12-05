@@ -10,7 +10,7 @@
   /* Header Style */
   .editor-form h2,
   .article-cards h2 {
-    color: #66b2ff;
+    color: var(--secondary);
     margin-bottom: 1.5rem;
   }
   
@@ -30,23 +30,23 @@
   .editor-form .form-control {
     background-color: #33394d;
     color: #ffffff;
-    border: 1px solid #66b2ff;
+    border: 1px solid var(--secondary);
   }
   
   .editor-form .form-control:focus {
     background-color: #3d435a;
     color: #ffffff;
-    border-color: #a3c9ff;
+    border-color: var(--secondary);
   }
   
   .editor-form .btn-primary {
-    background-color: #66b2ff;
-    border-color: #66b2ff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
   }
   
   .editor-form .btn-primary:hover {
-    background-color: #529bcc;
-    border-color: #529bcc;
+    filter: brightness(85%);
+    border-color: var(--secondary);
   }
   
   /* Article Card Style */
@@ -75,21 +75,21 @@
   }
   
   .card .card-title {
-    color: #66b2ff;
+    color: var(--secondary);
     font-weight: bold;
   }
   
   .card .card-text {
-    color: #a3c9ff;
+    color: var(--secondary);
   }
   
   .card .btn-primary {
-    background-color: #66b2ff;
+    background-color: var(--primary);
     border: none;
   }
   
   .card .btn-primary:hover {
-    background-color: #529bcc;
+    filter: brightness(85%);
   }
   
   /* Modal (Expanded Article View) */
@@ -103,20 +103,20 @@
   }
   
   .modal-body h3 {
-    color: #66b2ff;
+    color: var(--secondary);
   }
   
   .modal-body p {
-    color: #a3c9ff;
+    color: var(--secondary);
   }
   
   .modal .btn-secondary {
-    background-color: #3d435a;
+    background-color: var(--secondary);
     color: #ffffff;
     border: none;
   }
   
   .modal .btn-secondary:hover {
-    background-color: #52586a;
+    filter: brightness(85%);
   }
   

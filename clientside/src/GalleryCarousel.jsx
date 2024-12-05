@@ -18,7 +18,7 @@ const images = [
 function GalleryCarousel() {
   return (
     <div className="container my-5">
-      <h2 className="--text-primary text-center mb-4">Gallery</h2>
+      <h2 className="--text-primary --section-text text-center mb-4">Gallery</h2>
       <Carousel
         indicators={false} // Hide indicators if you prefer
         prevLabel=""

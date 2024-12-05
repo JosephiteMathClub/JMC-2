@@ -1,0 +1,84 @@
+/* Motto Page Styling */
+.motto-page {
+  background-color: var(--background);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.motto-header {
+  color: var(--primary);
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.motto-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.motto-tagline {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  animation: slideUp 2s ease-in-out;
+}
+
+/* Infinity Animation */
+.motto-animation {
+  margin: 30px auto;
+  width: 100px;
+  height: 100px;
+}
+
+.motto-infinity-symbol {
+  fill: var(--secondary-color);
+  animation: rotateInfinity 5s linear infinite;
+}
+
+@keyframes rotateInfinity {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Motto Description */
+.motto-description {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: linear-gradient(145deg, #000000, #05121f); /* Blueish dark gradient */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.motto-highlight {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

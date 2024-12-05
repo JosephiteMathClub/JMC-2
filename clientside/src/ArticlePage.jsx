@@ -33,7 +33,7 @@ function ArticlePage() {
     <div>
         <Navbar />
     <div className="article-page">
-      <h2 class="--text-primary">Articles</h2>
+      <h2 className="--text-primary --section-text">Articles</h2>
       <div className="article-cards">
         {Array.isArray(articles) && articles.length > 0 ? (
           articles.map((article) => (

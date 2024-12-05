@@ -11,7 +11,7 @@ const quizSchema = new mongoose.Schema({
     }
   ],
   totalMarks: { type: Number, required: true },
-  timeAllocation: { type: Number, required: true },
+  timeAllocation: { type: Number},
   allowedClasses: [{ type: Number, required: true }],
 });
 
