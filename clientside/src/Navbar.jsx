@@ -39,6 +39,7 @@ function Navbar() {
               <Link className="nav-link text-secondary" to="/home#contact">Contact</Link>
             </li>
           </ul>
+          <br></br>
           <button className="eventbtn ms-lg-3 btnn" onClick={handleNavigation}> <strong className="strong">Register</strong>
   <div id="container-stars">
     <div id="stars"></div>

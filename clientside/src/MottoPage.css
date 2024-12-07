@@ -50,7 +50,7 @@
   margin: 20px auto;
   max-width: 600px;
   padding: 20px;
-  background: linear-gradient(145deg, #000000, #05121f); /* Blueish dark gradient */
+  background: var(--background);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

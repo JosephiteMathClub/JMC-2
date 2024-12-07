@@ -1,18 +1,19 @@
 :root {
   --primary: #007aff;
-  --secondary: #fe53bb;
+  --secondary: #e414c1;
   --black: #070716;
   --dark-black: #000000;
-  --background: black;
+  --background: linear-gradient(145deg, rgb(1, 0, 14) 0%, rgb(9, 0, 26) 70%, rgb(0, 0, 0) 100%);;
 }
 html {
   scroll-behavior: smooth;
 }
-
-body{
-  background-color: black !important;
+* {
+  transition: cursor 0.2s ease-in-out;
 }
-/* Add a hover effect to navbar links */
+body{
+  background: var(--background);
+}/* Add a hover effect to navbar links */
 .navbar-nav .nav-link {
   color: var(--secondary); /* Initial color */
   font-size: 1.1rem; /* Increase the font size */
@@ -230,7 +231,7 @@ list-style: none;}
 
 /*hero*/
 .hero-section {
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--background);
   backdrop-filter: blur(10px);
   padding: 3rem 0;
   position: relative;
@@ -355,3 +356,11 @@ list-style: none;}
     0 4px 6px 0 rgb(93 100 148 / 20%);
   transition: all 0.4s ease-out; /* Slightly slower for smooth glow */
 }
+
+body {
+  cursor: url("../public/cursor.svg") 4 4, auto ;
+}
+textarea, input, .text-selectable {
+  cursor: url('../public/pen.svg') 4 4, text;
+}
+
