@@ -23,7 +23,7 @@ function AboutCard() {
           {/* Image Section */}
           <div className="col-lg-6 text-center">
             <img
-              src="../public/mbg.png" // Replace with a mathematical image URL
+              src="/mbg.png" // Replace with a mathematical image URL
               alt="Mathematical Representation"
               className="img-fluid rounded shadow-lg"
             />
